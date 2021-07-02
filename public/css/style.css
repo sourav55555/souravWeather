@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Texturina:ital,wght@0,300;0,400;0,900;1,200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Texturina', serif;
+}
+
+:root{
+    --main-bg: #131010;
+    --main-color: #0097e6;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+.main_menu{
+    background-color: var(--main-bg);
+    padding: 2rem 0;
+}
+.navbar{
+    background-color: var(--main-bg);
+    color: white;
+}
+.navbar a{
+  color: white;
+  font-size: 1.5rem;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+.navbar li{
+    margin-left: 20px;
+}
+.navbar-toggler{
+    background-color: gray;
+  
+}
+.fa-snowflake{
+    transition: all linear;
+    animation: rot 2s linear infinite;
+    color: var(--main-color);
+}
+@keyframes rot{
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+}
+.main-header-left{
+    height: 56rem;
+    justify-content: center;
+    font-size: 2rem;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+.main-header-left p{
+    font-size: medium;
+
+}
+.main-header-left h2{
+    font-size: 25px;
+    margin: 5px 0 35px;
+    text-transform: capitalize;
+}
+.main-header-left button{
+    border-radius: 20px;
+    box-shadow: 2px 8px 6px -3px #000;
+    font-size: 14px;
+    outline: none;
+    padding: 2px 12px;
+    border: none;
+    text-transform: uppercase;
+}
+.main-header-left button:hover{
+    box-shadow: 2px 8px 6px -3px var(--main-color);
+}
+
+.main-header-right{
+    height: 56rem;
+    justify-content: center;
+    font-size: 2rem;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    background-color: var(--main-bg);
+     width: 100%;
+     margin-top: auto;
+}
+footer p{
+    margin: 0;
+    line-height: 6rem;
+    color: white;
+    font-size: 1.4rem;
+    text-align: center;
+}
+@media (max-width:768px){
+ .main-header-left{
+     height: auto;
+     margin: 3rem 0;
+ }  
+ .main-header-right{
+     height: auto;
+     margin-top: 2rem;
+     margin-bottom: 1rem;
+ } 
+}
+.main-header-left h2 span{
+    color: var(--main-color);
+}
+.main-header-right figure img{
+    
+}
+.tempinfo{
+    margin: auto;
+    width: 35rem;
+    min-height: 20rem;
+    background-color: rgb(35, 35, 63);
+    border-radius: 3rem;
+    
+}
+.top-layer{
+    height: 20%;
+    width: 100%;
+    background-color: rgb(23, 23, 32);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 3rem;
+    
+}
+.top-layer p{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    font-size: 15px;
+    color: white;
+}
+.main-layer{
+   padding: 2rem;
+   color: white;
+   width: 100%;
+   height: 80%;
+   display: flex;
+   flex-direction: column;
+}
+.main-layer #city-name{
+    padding: 0rem 0 2rem;
+    font-weight: 900;
+    font-size:large;
+    color: rgb(247, 223, 179);
+}
+.main-layer .middle-layer{
+    justify-content: space-around;
+    display: flex;
+    color: white;
+}
+.main-layer .middle-layer p,
+.main-layer .middle-layer .fs {
+  font-size: 5rem;
+  font-weight: 800;
+}
+.fas{
+    color: #0097e6;
+}
+sup{
+    font-size: 5rem;
+    margin-top: -2rem;
+}
+.data_hide{
+    visibility: hidden;
+    transition: all .04s linear;
+}
+.temp-form{
+    margin: 7rem auto 5rem;
+    position: relative;
+    width: 60%;
+}
+.temp-form input[type='text'] {
+    width: 100%;
+    background-color: var(--main-bg);
+     color: white;
+    padding: 11px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+.temp-form input[type='submit']{
+    position: absolute;
+    background-color: turquoise;
+    color: white;
+    top: 3px;
+    right: 3px;
+    padding: 9px 27px;
+    border: none;
+    border-radius: 20px;
+    font-size: 13px;
+}
+.temp-form input[type='submit']:hover{
+    background-color: rgb(181, 122, 196);
+    transition: all .05s linear;
+}

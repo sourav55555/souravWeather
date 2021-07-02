@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>headerlinks}}
+</head>
+<body>
+    {{>navbar}}
+     <div class="container-fluid main_header">
+         <div class="row">
+             <div class="col-md-10 col-12 mx-auto">
+
+              <div class="main_content">
+                 <form class="temp-form">
+                     <input type="text" id="cityN" placeholder="Enter your city name">
+                     <input type="submit" id="submitBtn">
+                  </form>
+              </div>
+              <div class="tempinfo">
+                 <div class="top-layer">
+                     <p id="day">Sunday</p>
+                     <p id="today_date">15 Apr</p>
+                 </div>
+                 <div class="main-layer">
+                     <p id="city-name">Get output here</p>
+                     <div class="middle-layer data_hide" >
+                        <p id="temp"><span id="temp_real_val">0</span> <sup>o</sup>C</p>
+                        <p id="temp-status"> <i class="fas fa-cloud"></i> </p>
+                     </div>
+                 </div>
+                 </div>
+              </div>
+         </div>
+     </div>
+
+    {{>footer}}
+    <script src="js/main.js"></script>
+    {{>jslink}}
+    <script>
+        const currentDay= document.getElementById('day');
+        const currentDate= document.getElementById('today_date');
+        const arrDays= ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+        const arrMonths= ['Jan',"Feb",'Mar','Apr','May','Jun','July','Aug','Sep','oct','Nov','Dec'];
+        const getCurrentDate= ()=>{
+            let tody_date= new Date();
+            currentDay.innerText= (arrDays[tody_date.getDay()]);
+            currentDate.innerText= `${tody_date.getDate()} ${arrMonths[tody_date.getMonth()]}`;
+        }
+        getCurrentDate();
+    </script>
+    
+</body>
+</html>
